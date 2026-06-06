@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="eletrodomesticos.Controller"
+      spacing="15" style="-fx-font-size: 12;">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Título -->
+    <Label text="Controle de Eletrodomésticos"
+           style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+    <!-- Container principal com 3 colunas -->
+    <GridPane hgap="20" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="33"/>
+            <ColumnConstraints percentWidth="33"/>
+            <ColumnConstraints percentWidth="34"/>
+        </columnConstraints>
+
+        <!-- ========== FORNO ========== -->
+        <VBox spacing="10" style="-fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 15;"
+              GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="🔥 FORNO"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #d9534f;"/>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Status:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="fornoStatusLabel" text="Desligado" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Temp:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="fornoTempLabel" text="0 °C" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <Separator/>
+
+            <HBox spacing="5" style="-fx-alignment: center;">
+                <Button fx:id="fornoToggleButton" text="Ligar" prefWidth="70"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+                <Button fx:id="fornoIncButton" text="➕" prefWidth="50"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+                <Button fx:id="fornoDecButton" text="➖" prefWidth="50"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+            </HBox>
+        </VBox>
+
+        <!-- ========== GELADEIRA ========== -->
+        <VBox spacing="10" style="-fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 15;"
+              GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Label text="❄️ GELADEIRA"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #0275d8;"/>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Status:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="gelStatusLabel" text="Desligada" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Temp:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="gelTempLabel" text="5 °C" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Potência:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="gelPotenciaLabel" text="Potência: 2/4" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <Separator/>
+
+            <HBox spacing="5" style="-fx-alignment: center;">
+                <Button fx:id="gelToggleButton" text="Ligar" prefWidth="70"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+                <Button fx:id="gelIncButton" text="➕" prefWidth="50"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+                <Button fx:id="gelDecButton" text="➖" prefWidth="50"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+            </HBox>
+        </VBox>
+
+        <!-- ========== AR-CONDICIONADO ========== -->
+        <VBox spacing="10" style="-fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 15;"
+              GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <Label text="❄ AR-CONDICIONADO"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #17a2b8;"/>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Status:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="arStatusLabel" text="Desligado" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <HBox spacing="10" style="-fx-alignment: center-left;">
+                <Label text="Temp:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="arTempLabel" text="22 °C" style="-fx-text-fill: #5cb85c;"/>
+            </HBox>
+
+            <Separator/>
+
+            <HBox spacing="5" style="-fx-alignment: center;">
+                <Button fx:id="arToggleButton" text="Ligar" prefWidth="70"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+                <Button fx:id="arIncButton" text="➕" prefWidth="50"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+                <Button fx:id="arDecButton" text="➖" prefWidth="50"
+                        style="-fx-font-size: 11; -fx-padding: 8;"/>
+            </HBox>
+        </VBox>
+    </GridPane>
+
+</VBox>
+
